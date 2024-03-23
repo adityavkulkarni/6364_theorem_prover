@@ -4,6 +4,7 @@ https://github.com/codeCollision4/resolution_solver
 """
 import argparse
 import time
+from multiprocessing import Pool
 
 OUTPUT = []
 
@@ -40,34 +41,31 @@ def negate_clause(clause):
 
 
 def theorem_prover(kb, clause_to_test):
-    ind = 1
     negated_clause = negate_clause(clause_to_test)
-    for cl in kb:
-        print_stdout(f"{ind}. {' '.join(cl)} {{}}")
-        ind += 1
+    ind = len(kb) + 1
+    existing_clauses = set(map(tuple, kb))
+
+    for i, cl in enumerate(kb, start=1):
+        print_stdout(f"{i}. {' '.join(cl)} {{}}")
+
     for c in negated_clause:
         kb.append([c])
         print_stdout(f"{ind}. {c} {{}}")
+        existing_clauses.add((c,))
         ind += 1
-    cli = 1
-    while cli < ind - 1:
-        clj = 0
-        while clj < cli:
-            result = resolve(kb[cli], kb[clj], kb)
+
+    for cli, clause1 in enumerate(kb, start=1):
+        for clj, clause2 in enumerate(kb[:cli], start=1):
+            result = resolve(clause1, clause2, existing_clauses)
             if result is False:
-                print_stdout(f"{ind}. Contradiction {{{cli+1}, {clj+1}}}")
-                ind += 1
+                print_stdout(f"{ind}. Contradiction {{{cli}, {clj}}}")
                 print_stdout("Valid")
                 return
-            elif result is True:
-                clj += 1
-                continue
-            else:
-                print_stdout(f"{ind}. {' '.join(result)} {{{cli+1}, {clj+1}}}")
-                ind += 1
+            elif result is not True and tuple(result) not in existing_clauses:
+                existing_clauses.add(tuple(result))
                 kb.append(result)
-            clj += 1
-        cli += 1
+                print_stdout(f"{ind}. {' '.join(result)} {{{cli}, {clj}}}")
+                ind += 1
     print_stdout('Not Valid')
 
 
@@ -90,11 +88,9 @@ def resolve(c1, c2, clauses):
                 elif impTrue(resolved):
                     return True
                 else:
-                    for cl in clauses:
-                        if not Diff(resolved, cl):
-                            return True
+                    if any(map(lambda cl: not Diff(resolved, cl), clauses)):
+                        return True
                     return resolved
-
     if resolved == ors:
         return True
 
@@ -106,20 +102,23 @@ def is_contradiction(l1, l2):
         return False
 
 
-
 def impTrue(resolved):
-    for r1 in resolved:
-        for r2 in resolved[resolved.index(r1) + 1:]:  # Start from next element
+    seen = set()
+    for i, r1 in enumerate(resolved):
+        for r2 in resolved[i + 1:]:
+            if (r1, r2) in seen or (r2, r1) in seen:
+                continue
             if is_contradiction(r1, r2):
                 return True
+            seen.add((r1, r2))
     return False
 
 
+
 def Diff(li1, li2):
-    li1 = list(li1)
-    li2 = list(li2)
-    li_dif = [i for i in li1 + li2 if i not in li1 or i not in li2]
-    return li_dif
+    set1 = set(li1)
+    set2 = set(li2)
+    return list(set1.symmetric_difference(set2))
 
 
 def print_stdout(txt):
