@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="169016c0-787e-41f8-900d-57948ea6d3fe" name="Changes" comment="misc">
+      <change afterPath="$PROJECT_DIR$/facts.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task1.in" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task2.in" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/task3.in" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +151,7 @@
       <workItem from="1711120244970" duration="3702000" />
       <workItem from="1711147976253" duration="7416000" />
       <workItem from="1711212001264" duration="4676000" />
-      <workItem from="1711289250810" duration="989000" />
+      <workItem from="1711289250810" duration="2401000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -174,7 +177,23 @@
       <option name="project" value="LOCAL" />
       <updated>1711155105796</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="misc">
+      <option name="closed" value="true" />
+      <created>1711290260248</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1711290260248</updated>
+    </task>
+    <task id="LOCAL-00005" summary="misc">
+      <option name="closed" value="true" />
+      <created>1711290266697</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1711290266697</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,6 +218,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/theorem_prover$main1.coverage" NAME="main1 Coverage Results" MODIFIED="1711152324691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/theorem_prover$1.coverage" NAME="1 Coverage Results" MODIFIED="1711244146435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/theorem_prover$main.coverage" NAME="main Coverage Results" MODIFIED="1711290236992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/theorem_prover$main.coverage" NAME="main Coverage Results" MODIFIED="1711290242963" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

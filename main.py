@@ -9,9 +9,6 @@ def parse_kb_file(filepath):
     initial_kb = []
     with open(filepath, 'r') as f:
         for line in f:
-            line = line.strip()
-            if not line:
-                continue
             clause = []
             current_literal = ""
             for char in line:
