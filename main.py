@@ -118,4 +118,4 @@ if __name__ == '__main__':
     args = parser.parse_args()
     init_kb, ct = parse_kb_file(args.kb_file)
     theorem_prover(init_kb, ct)
-    test(args.kb_file)
+    # test(args.kb_file)
