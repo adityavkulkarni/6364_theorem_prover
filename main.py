@@ -53,7 +53,7 @@ def theorem_prover(kb, clause_to_test):
     # Resolution proof begins
     for cli, clause1 in enumerate(kb, start=1):
         for clj, clause2 in enumerate(kb[:cli], start=1):
-            # Resolve each clause
+            # Resolve each pair of clause
             status, result = resolve(clause1, clause2)
             if status is False:
                 # Contradiction
