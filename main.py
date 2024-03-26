@@ -63,7 +63,7 @@ def resolve(c1, c2):
     for r1 in c1 + c2:
         if r1 not in resolved:
             resolved.append(r1)
-    ors = resolved
+    complete = resolved
     for l1 in c1:
         for l2 in c2:
             if l1 == ('~' + l2) or l2 == ('~' + l1):
@@ -78,7 +78,7 @@ def resolve(c1, c2):
                         return None, []
                     else:
                         return True, resolved
-    if resolved == ors:
+    if resolved == complete:
         return None, []
 
 
