@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="169016c0-787e-41f8-900d-57948ea6d3fe" name="Changes" comment="misc">
-      <change beforePath="$PROJECT_DIR$/facts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/facts.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task1.in" beforeDir="false" afterPath="$PROJECT_DIR$/task1.in" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2.in" beforeDir="false" afterPath="$PROJECT_DIR$/task2.in" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task3.in" beforeDir="false" afterPath="$PROJECT_DIR$/task3.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +86,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
-      <option name="PARAMETERS" value="demo.in" />
+      <option name="PARAMETERS" value="task7.in" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -150,7 +147,7 @@
       <workItem from="1711120244970" duration="3702000" />
       <workItem from="1711147976253" duration="7416000" />
       <workItem from="1711212001264" duration="4676000" />
-      <workItem from="1711289250810" duration="5491000" />
+      <workItem from="1711289250810" duration="5999000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -224,7 +221,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711418101268</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="misc">
+      <option name="closed" value="true" />
+      <created>1711418655752</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1711418655752</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,8 +245,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>40</line>
+          <line>51</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>109</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
